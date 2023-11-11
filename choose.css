@@ -1,0 +1,40 @@
+*{
+padding: 0px;
+margin: 0px;
+background-color: black;
+}
+.container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.container h1{
+    font-size: 5em;
+    margin: auto;
+    margin-top: 1.5em;
+    text-shadow: 5px 5px 20px red;
+}
+.box{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.box img{
+    height: 47vh;
+    width: 25vw;
+}
+.box div h2,.box div p {
+    margin: 0.5em;
+}
+.box div{
+    cursor: pointer;
+    margin: 1em;
+    transition: 1.5s;
+    box-shadow: 10px 10px 10px rgb(144, 97, 97);
+}
+.box div:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgb(144, 97, 97);
+}
