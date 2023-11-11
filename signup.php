@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<?php
+    <div class="container">
+    <?php
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $usernamee=$_POST['usernamee'];
         $email=$_POST['email'];
@@ -29,10 +30,9 @@
             $result=mysqli_query($conn,$sql);
     }
 ?>
-    <div class="container">
         <div class="box">
             <h2>Registration Form</h2>        
-                <form action="./signup/signup.php"method="post" >
+                <form action="signup.php"method="post" >
                 <div class="form-container">  
                 <div class="input-name">
                         <i class="fa fa-user"></i>
