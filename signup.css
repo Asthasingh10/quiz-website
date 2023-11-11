@@ -6,7 +6,7 @@
 body{
     display: flex;
     justify-content: center;
-    color: white;
+    color: black;
 }
 .container{
     background-color: black;
@@ -49,6 +49,7 @@ body{
 .button{
     background-color: #150c0c;
     font-size: 1em;
+    cursor: pointer;
     color: white;
 }
 input:hover{

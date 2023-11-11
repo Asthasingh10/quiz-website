@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-QuizWebsite</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
 </head>
 
 <body>
+    <!-- <?php
+    if(isset($_POST)){
+        $email=$_POST['username'];
+        $password=$_POST['password'];
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
+    }
+    ?> -->
     <div class="container">
         <div class="box">
-            <form action="#" class="form-box">
+            <form action="login.php" method="post" class="form-box">
                 <h2>LOGIN</h2>
                 <div class="input-box">
                     <i class="fa-solid fa-lock" style="color: #e2e3e4;"></i>
@@ -26,7 +36,7 @@
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="newac">
-                    <p>Don't have an account? <a href="signup.html">Create an account</a></p>
+                    <p>Don't have an account ? <a href="signup.html"> Create an account</a></p>
                 </div>
             </form>
             <div class="info">
@@ -35,7 +45,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css"></script>
 </body>
 
 </html>

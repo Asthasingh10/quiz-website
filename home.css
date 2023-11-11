@@ -1,3 +1,6 @@
+.container{
+    color: white;
+}
 .content-page{
     display: flex;
     margin: 3em;
@@ -46,4 +49,7 @@ b{
 }
 #about h1{
     text-align: center;
+}
+.input-box input:hover{
+    background-color:white ;
 }
