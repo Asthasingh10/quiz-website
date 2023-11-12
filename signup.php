@@ -21,26 +21,26 @@
        die("Sorry we are failed to connect");
     }
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $username=$_POST['usernamee'];
+        $usernamee=$_POST['usernamee'];
         $email=$_POST['email'];
         $password=$_POST['password'];
         $cpassword=$_POST['cpassword'];
         $gender=$_POST['gender'];
-        $country=$_Post['country'];
+        $country=$_POST['country'];
        
       // SUBMIT THESE TO THE DATABASE
-        $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$username', '$email', '$password', '$cpassword', '$gender', '$country')";
-         $result=mysqli_query($conn,$sql);
+      $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$usernamee', '$email', '$password', '$cpassword', '$gender', '$country');";
+      $result=mysqli_query($conn,$sql);
     }
 ?>
         <div class="box">
             <h2>Registration Form</h2>
             <div class="form-container">
-                <form action="./signup.php"  method="post">
+                <form action="signup.php"  method="post">
                     <div class="input-name">
                         <i class="fa fa-user"></i>
                         <label for="usernamee"></label>
-                        <input type="text" id="username" placeholder="Username" name="username" required>
+                        <input type="text" id="username" placeholder="Username" name="usernamee" required>
                         <p id="usernameError" class="error"></p>
                     </div>
                     <div class="input-name">
