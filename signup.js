@@ -76,11 +76,11 @@ function validateForm() {
     var isPasswordValid = validatePassword();
     var isGenderValid = validateGender();
     var isTermsValid = validateTerms();
-
     if (isUsernameValid && isEmailValid && isPasswordValid && isGenderValid && isTermsValid) {
         // You can submit the form or perform other actions here
         alert("Form submitted successfully!");
+        window.open('questions.html', '_blank');
     }else{
-        alert("Something went wrong.Please check your password..!!");
+        alert("Something went wrong...!!");
     }
 }
