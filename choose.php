@@ -18,7 +18,7 @@
           <p>Wants to initiate any type of quiz ? </p>
         </div>
         <div>
-          <a href="signup.php">
+          <a href="signupuser.php">
             <img src="user.png" alt="Unable to load this image">
           </a>
           <h2>Sign up as User</h2>
