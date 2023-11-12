@@ -1,3 +1,15 @@
+<?php
+ $servername="localhost";
+ $username="root";
+ $password="";
+ $database="registration-quiz";
+ $conn=mysqli_connect($servername,$username,$password,$database);
+ if(!$conn){
+    die("Sorry we are failed to connect");
+ }else{
+    echo "Connected succesfully";
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,31 +24,27 @@
     <div class="container">
     <?php
     if($_SERVER['REQUEST_METHOD']=='POST'){
-        $usernamee=$_POST['usernamee'];
+        $username=$_POST['usernamee'];
         $email=$_POST['email'];
         $password=$_POST['password'];
         $cpassword=$_POST['cpassword'];
         $gender=$_POST['gender'];
         $country=$_Post['country'];
         $radio=$_POST['radio'];  
-    echo 'Alert';
-        $servername="localhost";
-        $username="root";
-        $password="";
-        $database="registration-quiz";
-        $conn=mysqli_connect($servername,$username,$password,$database);
+           echo 'Alert';
+        
       // SUBMIT THESE TO THE DATABASE
-        $sql="INSERT INTO `user-register` (`usernamee`, `email`, `password`, `cpassword`, `gender`, `country`, `radio`) VALUES ('$usernamee', '$email', '$password', '$cpassword', '$gender', '$country', '$radio')";
-            $result=mysqli_query($conn,$sql);
+        $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$username', '$email', '$password', '$cpassword', '$gender', '$country')";
+         $result=mysqli_query($conn,$sql);
     }
 ?>
         <div class="box">
             <h2>Registration Form</h2>        
-                <form action="signup.php"method="post" >
+                <form action="./signup.php"method="post" >
                 <div class="input-name">
                         <i class="fa fa-user"></i>
                         <label for="usernamee"></label>
-                        <input type="text" id="username" placeholder="Username" name="username" required>
+                        <input type="text" id="username" placeholder="Username" name="usernamee" required>
                         <p id="usernameError" class="error"></p>
                     </div>
                     <div class="input-name">
@@ -58,15 +66,15 @@
                     </div>
                     <div class="input-gender">
                         <label>
-                            <input type="radio" class="radio-button" name="gender" id="male"><label
+                            <input type="radio" class="radio-button" value="male" name="gender" id="male"><label
                                 for="male">Male</label>
                         </label>
                         <label>
-                            <input type="radio" class="radio-button" name="gender" id="female"><label
+                            <input type="radio" class="radio-button" value="female" name="gender" id="female"><label
                                 for="female">Female</label>
                         </label>
                         <label>
-                            <input type="radio" class="radio-button" name="gender" id="other"><label
+                            <input type="radio" class="radio-button" value="other" name="gender" id="other"><label
                                 for="other">Other</label>
                         </label>
                         <p id="genderError" class="error"></p>
@@ -286,7 +294,7 @@
                         </label>
                     </div>
                     <div class="input-terms">
-                        <input type="checkbox" class="check-btn" id="radio" name="radio" value="radio" required>
+                        <input type="checkbox" class="check-btn" id="radio" value="radio" required>
                         <label for="radio">I accept the terms & conditions</label>
                         <p id="termsError" class="error"></p>
                     </div>
