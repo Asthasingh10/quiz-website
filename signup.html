@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="container">
-    <?php
+        <!-- <?php
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $usernamee=$_POST['usernamee'];
         $email=$_POST['email'];
@@ -29,11 +30,12 @@
         $sql="INSERT INTO `user-register` (`usernamee`, `email`, `password`, `cpassword`, `gender`, `country`, `radio`) VALUES ('$usernamee', '$email', '$password', '$cpassword', '$gender', '$country', '$radio')";
             $result=mysqli_query($conn,$sql);
     }
-?>
+?> -->
         <div class="box">
-            <h2>Registration Form</h2>        
-                <form action="signup.php"method="post" >
-                <div class="input-name">
+            <h2>Registration Form</h2>
+            <div class="form-container">
+                <form action="#" >
+                    <div class="input-name">
                         <i class="fa fa-user"></i>
                         <label for="usernamee"></label>
                         <input type="text" id="username" placeholder="Username" name="username" required>
@@ -264,7 +266,8 @@
                                 <option name="country" value="Tunisia">Tunisia</option>
                                 <option name="country" value="Turkey">Turkey</option>
                                 <option name="country" value="Turkmenistan">Turkmenistan</option>
-                                <option name="country" value="Turks and Caicos Islands">Turks and Caicos Islands  </option>
+                                <option name="country" value="Turks and Caicos Islands">Turks and Caicos Islands
+                                </option>
                                 <option name="country" value="Tuvalu">Tuvalu</option>
                                 <option name="country" value="Uganda">Uganda</option>
                                 <option name="country" value="Ukraine">Ukraine</option>
@@ -293,10 +296,11 @@
                     <div class="input-name btn">
                         <input type="submit" class="button" value="submit" onclick="validateForm()">
                     </div>
-        </form>
+                </form>
             </div>
         </div>
     </div>
+
     <script src="signup.js"></script>
 </body>
 
