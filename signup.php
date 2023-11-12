@@ -27,9 +27,7 @@
         $cpassword=$_POST['cpassword'];
         $gender=$_POST['gender'];
         $country=$_Post['country'];
-        $radio=$_POST['radio'];  
-           echo 'Alert';
-        
+       
       // SUBMIT THESE TO THE DATABASE
         $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$username', '$email', '$password', '$cpassword', '$gender', '$country')";
          $result=mysqli_query($conn,$sql);
