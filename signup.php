@@ -1,15 +1,4 @@
-<?php
- $servername="localhost";
- $username="root";
- $password="";
- $database="registration-quiz";
- $conn=mysqli_connect($servername,$username,$password,$database);
- if(!$conn){
-    die("Sorry we are failed to connect");
- }else{
-    echo "Connected succesfully";
- }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +12,14 @@
 <body>
     <div class="container">
     <?php
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $database="registration-quiz";
+    $conn=mysqli_connect($servername,$username,$password,$database);
+    if(!$conn){
+       die("Sorry we are failed to connect");
+    }
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $username=$_POST['usernamee'];
         $email=$_POST['email'];
@@ -38,9 +35,9 @@
          $result=mysqli_query($conn,$sql);
     }
 ?>
-        <div class="box">
+     <div class="box">
             <h2>Registration Form</h2>        
-                <form action="./signup.php"method="post" >
+            <form action="./signup.php"method="post" >
                 <div class="input-name">
                         <i class="fa fa-user"></i>
                         <label for="usernamee"></label>
