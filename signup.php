@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +8,7 @@
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="container">
     <?php
@@ -33,13 +33,14 @@
          $result=mysqli_query($conn,$sql);
     }
 ?>
-     <div class="box">
-            <h2>Registration Form</h2>        
-            <form action="./signup.php"method="post" >
-                <div class="input-name">
+        <div class="box">
+            <h2>Registration Form</h2>
+            <div class="form-container">
+                <form action="./signup.php"  method="post">
+                    <div class="input-name">
                         <i class="fa fa-user"></i>
                         <label for="usernamee"></label>
-                        <input type="text" id="username" placeholder="Username" name="usernamee" required>
+                        <input type="text" id="username" placeholder="Username" name="username" required>
                         <p id="usernameError" class="error"></p>
                     </div>
                     <div class="input-name">
@@ -61,15 +62,15 @@
                     </div>
                     <div class="input-gender">
                         <label>
-                            <input type="radio" class="radio-button" value="male" name="gender" id="male"><label
+                            <input type="radio" class="radio-button" name="gender" id="male"><label
                                 for="male">Male</label>
                         </label>
                         <label>
-                            <input type="radio" class="radio-button" value="female" name="gender" id="female"><label
+                            <input type="radio" class="radio-button" name="gender" id="female"><label
                                 for="female">Female</label>
                         </label>
                         <label>
-                            <input type="radio" class="radio-button" value="other" name="gender" id="other"><label
+                            <input type="radio" class="radio-button" name="gender" id="other"><label
                                 for="other">Other</label>
                         </label>
                         <p id="genderError" class="error"></p>
@@ -267,7 +268,8 @@
                                 <option name="country" value="Tunisia">Tunisia</option>
                                 <option name="country" value="Turkey">Turkey</option>
                                 <option name="country" value="Turkmenistan">Turkmenistan</option>
-                                <option name="country" value="Turks and Caicos Islands">Turks and Caicos Islands  </option>
+                                <option name="country" value="Turks and Caicos Islands">Turks and Caicos Islands
+                                </option>
                                 <option name="country" value="Tuvalu">Tuvalu</option>
                                 <option name="country" value="Uganda">Uganda</option>
                                 <option name="country" value="Ukraine">Ukraine</option>
@@ -289,17 +291,18 @@
                         </label>
                     </div>
                     <div class="input-terms">
-                        <input type="checkbox" class="check-btn" id="radio" value="radio" required>
+                        <input type="checkbox" class="check-btn" id="radio" name="radio" value="radio" required>
                         <label for="radio">I accept the terms & conditions</label>
                         <p id="termsError" class="error"></p>
                     </div>
                     <div class="input-name btn">
                         <input type="submit" class="button" value="submit" onclick="validateForm()">
                     </div>
-        </form>
+                </form>
             </div>
         </div>
     </div>
+
     <script src="signup.js"></script>
 </body>
 
