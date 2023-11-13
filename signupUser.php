@@ -39,7 +39,7 @@
             $exist=true;
         }else{
             $exist=false;
-            header("location:userPage.php");
+            header("location:questions.php");
         }
 
       // SUBMIT THESE TO THE DATABASE

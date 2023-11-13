@@ -79,7 +79,6 @@ function validateForm() {
     if (isUsernameValid && isEmailValid && isPasswordValid && isGenderValid && isTermsValid) {
         // You can submit the form or perform other actions here
         alert("Form submitted successfully!");
-        window.open('questions.php', '_blank');
     }else{
         alert("Something went wrong...!!");
     }
