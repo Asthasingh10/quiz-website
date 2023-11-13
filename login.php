@@ -12,30 +12,30 @@
 <body>
     <div class="container">
     <?php
- $servername="localhost";
- $username="root";
- $password="";
- $database="registration-quiz";
- $conn=mysqli_connect($servername,$username,$password,$database);
- if(!$conn){
-    die("Sorry we are failed to connect");
- }
- $login=false;
-    if($_SERVER['REQUEST_METHOD']=='POST'){
-        $usernamee=$_POST['usernamee'];
-        $password=$_POST['password'];
-    $sql="SELECT * FROM `user-register` where username='$usernamee' AND password='$password' ";
-    $result=mysqli_query($conn,$sql);
-    $num=mysqli_num_rows($result);
-        if($num==1){
-            $login=true;
-            session_start();
-            $_SESSION['loggedin']=true;
-            $_SESSION['username']=$usernamee;
-            header("location:userPage.php");
-        }else{
-            echo "Invalid credentials";
+        $servername="localhost";
+        $username="root";
+        $password="";
+        $database="registration-quiz";
+        $conn=mysqli_connect($servername,$username,$password,$database);
+        if(!$conn){
+            die("Sorry we are failed to connect");
         }
+        $login=false;
+            if($_SERVER['REQUEST_METHOD']=='POST'){
+                $usernamee=$_POST['usernamee'];
+                $password=$_POST['password'];
+            $sql="SELECT * FROM `user-register` where username='$usernamee' AND password='$password' ";
+            $result=mysqli_query($conn,$sql);
+            $num=mysqli_num_rows($result);
+                if($num==1){
+                    $login=true;
+                    session_start();
+                    $_SESSION['loggedin']=true;
+                    $_SESSION['username']=$usernamee;
+                    header("location:userPage.php");
+                }else{
+                    echo "Invalid credentials";
+                }
     }
     ?>
         <div class="box">

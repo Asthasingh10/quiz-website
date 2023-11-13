@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -306,4 +306,4 @@
     <script src="signup.js"></script>
 </body>
 
-</html>
+</html> -->
