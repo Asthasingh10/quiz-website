@@ -1,3 +1,26 @@
+<?php
+ $servername="localhost";
+ $username="root";
+ $password="";
+ $database="registration-quiz";
+ $conn=mysqli_connect($servername,$username,$password,$database);
+ if(!$conn){
+    die("Sorry we are failed to connect");
+ }
+ $login=false;
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $usernamee=$_POST['usernamee'];
+        $password=$_POST['password'];
+    $sql="SELECT * FROM `user-register` where username='$usernamee' AND password='$password' ";
+    $result=mysqli_query($conn,$sql);
+    $num=mysqli_num_rows($result);
+        if($num==1){
+            $login=true;
+        }else{
+            echo "Invalid credentials";
+        }
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,24 +32,19 @@
 </head>
 
 <body>
-    <!-- <?php
-    if(isset($_POST)){
-        $email=$_POST['username'];
-        $password=$_POST['password'];
-        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>';
-    }
-    ?> -->
     <div class="container">
         <div class="box">
+            <?php
+             if($login){
+                echo "You are logged in";
+            }
+            ?>
             <form action="login.php" method="post" class="form-box">
                 <h2>LOGIN</h2>
                 <div class="input-box">
                     <i class="fa-solid fa-lock" style="color: #e2e3e4;"></i>
                     <label for="Username">Username</label>
-                    <input type="text" required placeholder="Enter UserName" name="username">
+                    <input type="text" required placeholder="Enter UserName" name="usernamee">
 
                 </div>
                 <div class="input-box">
