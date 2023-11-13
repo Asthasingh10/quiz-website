@@ -33,8 +33,8 @@
         $existSql="SELECT * FROM `user-register` where username='$usernamee' ";
         $result=mysqli_query($conn,$existSql);
         $numExistUser=mysqli_num_rows($result);
-        $hashpassword=password_hash($password,PASSWORD_DEFAULT);
-        $confirmhashpassword=password_hash($cpassword,PASSWORD_DEFAULT);
+        // $hashpassword=password_hash($password,PASSWORD_DEFAULT);
+        // $confirmhashpassword=password_hash($cpassword,PASSWORD_DEFAULT);
         if($numExistUser>0){
             $exist=true;
         }else{
@@ -44,7 +44,7 @@
 
       // SUBMIT THESE TO THE DATABASE
       if($exist==false){
-      $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$usernamee', '$email', '$hashpassword', '$confirmhashpassword', '$gender', '$country');";
+      $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$usernamee', '$email', '$password', '$cpassword', '$gender', '$country');";
       $result=mysqli_query($conn,$sql);
     }else{
         echo "Username might be already exist";
