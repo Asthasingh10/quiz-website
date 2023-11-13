@@ -16,6 +16,10 @@
     $num=mysqli_num_rows($result);
         if($num==1){
             $login=true;
+            session_start();
+            $_SESSION['loggedin']=true;
+            $_SESSION['username']=$usernamee;
+            header("location:userPage.php");
         }else{
             echo "Invalid credentials";
         }
