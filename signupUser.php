@@ -20,6 +20,20 @@
     if(!$conn){
        die("Sorry we are failed to connect");
     }
+    //  CHECK WHETHER USERNAME EXISTS OR NOT
+    $exitSql="SELECT * FROM `user-register` where username='asthasingh' ";
+    $result=mysqli_query($conn,$result);
+    $numExistUser=mysqli_num_rows($result);
+    if($numExistUser>0){
+        $exist=true;
+    }else{
+        $exist=false;
+        echo "usename already exists";
+    }
+
+
+
+
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $usernamee=$_POST['usernamee'];
         $email=$_POST['email'];
@@ -29,9 +43,13 @@
         $country=$_POST['country'];
        
       // SUBMIT THESE TO THE DATABASE
+      if($exist==false){
       $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$usernamee', '$email', '$password', '$cpassword', '$gender', '$country');";
       $result=mysqli_query($conn,$sql);
+    }else{
+        echo "Username might be already exist";
     }
+}
 ?>
         <div class="box">
             <h2>Registration Form</h2>

@@ -78,8 +78,8 @@ function validateForm() {
     var isTermsValid = validateTerms();
     if (isUsernameValid && isEmailValid && isPasswordValid && isGenderValid && isTermsValid) {
         // You can submit the form or perform other actions here
-        alert("Form submitted successfully!");
-        window.open('userPage.html', '_blank');
+        // alert("Form submitted successfully!");
+        // window.open('userPage.html', '_blank');
     }else{
         alert("Something went wrong...!!");
     }
