@@ -32,7 +32,7 @@
                     session_start();
                     $_SESSION['loggedin']=true;
                     $_SESSION['username']=$usernamee;
-                    header("location:userPage.php");
+                    header("location:afterlogin.php");
                 }else{
                     echo "Invalid credentials";
                 }

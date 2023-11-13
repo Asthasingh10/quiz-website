@@ -2,14 +2,14 @@
  VALUES ('2', 'how many baals are here?', 'one', 'two ', 'three', 'four'); -->
 
 <?php
-$servername="localhost";
-$username="root";
-$password="";
-$database="questions";
-$conn=mysqli_connect($servername,$username,$password,$database);
-if(!$conn){
-  die("Sorry we are failed to connect".mysqli_connect_error());
-}
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $database="questions";
+    $conn=mysqli_connect($servername,$username,$password,$database);
+    if(!$conn){
+      die("Sorry we are failed to connect".mysqli_connect_error());
+    }
 ?> 
 <!doctype html>
 <html lang="en">
@@ -79,8 +79,8 @@ if(!$conn){
     <div id="mcqDisplay"></div>
   </div>
 <?php
-  $sql="SELECT * FROM `questions`";
-  $result=mysqli_query($conn,$sql);
+  // $sql="SELECT * FROM `questions`";
+  // $result=mysqli_query($conn,$sql);
   // while($row=mysqli_fetch_assoc($result)){
   //   echo "Your questions are--<br> ". $row['question'] ;
   //   echo "<br>";

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-QuizWebsite</title>
+    <title>Signup-QuizWebsite</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -39,7 +39,7 @@
             $exist=true;
         }else{
             $exist=false;
-            header("location:questions.php");
+            header("location:choose.php");
         }
 
       // SUBMIT THESE TO THE DATABASE
