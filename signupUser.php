@@ -20,19 +20,6 @@
     if(!$conn){
        die("Sorry we are failed to connect");
     }
-    //  CHECK WHETHER USERNAME EXISTS OR NOT
-    $exitSql="SELECT * FROM `user-register` where username='asthasingh' ";
-    $result=mysqli_query($conn,$result);
-    $numExistUser=mysqli_num_rows($result);
-    if($numExistUser>0){
-        $exist=true;
-    }else{
-        $exist=false;
-        echo "usename already exists";
-    }
-
-
-
 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $usernamee=$_POST['usernamee'];
@@ -42,6 +29,17 @@
         $gender=$_POST['gender'];
         $country=$_POST['country'];
        
+        //  CHECK WHETHER USERNAME EXISTS OR NOT
+        $existSql="SELECT * FROM `user-register` where username='$usernamee' ";
+        $result=mysqli_query($conn,$existSql);
+        $numExistUser=mysqli_num_rows($result);
+        if($numExistUser>0){
+            $exist=true;
+        }else{
+            $exist=false;
+            header("location:userPage.php");
+        }
+
       // SUBMIT THESE TO THE DATABASE
       if($exist==false){
       $sql="INSERT INTO `user-register` (`username`, `email`, `password`, `cpassword`, `gender`, `country`) VALUES ('$usernamee', '$email', '$password', '$cpassword', '$gender', '$country');";
@@ -54,7 +52,7 @@
         <div class="box">
             <h2>Registration Form</h2>
             <div class="form-container">
-                <form action="signup.php"  method="post">
+                <form action="signupUser.php"  method="post">
                     <div class="input-name">
                         <i class="fa fa-user"></i>
                         <label for="usernamee"></label>

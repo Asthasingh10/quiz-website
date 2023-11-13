@@ -11,14 +11,14 @@
       <h1>Who You Are... ? </h1>
       <div class="box">
         <div>
-          <a href="signup.php">
+          <a href="signupUser.php">
             <img src="admin.png" alt="Unable to load this image">
           </a>
           <h2>Sign up as Admin</h2>
           <p>Wants to initiate any type of quiz ? </p>
         </div>
         <div>
-          <a href="signupuser.php">
+          <a href="signupUser.php">
             <img src="user.png" alt="Unable to load this image">
           </a>
           <h2>Sign up as User</h2>
