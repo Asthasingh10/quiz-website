@@ -66,7 +66,7 @@
       <h3>You can upload your questions here ... !! </h3> <br>
     </div>
 
-    <form action="questions.php" id="mcqForm">
+    <form action="questions.php" method="post" id="mcqForm">
       <div>
         <input type="text" class="form-control" id="question" placeholder="Enter Question" name="mcq">
       </div>
@@ -78,19 +78,34 @@
     </form>
     <div id="mcqDisplay"></div>
   </div>
-<?php
-  // $sql="SELECT * FROM `questions`";
-  // $result=mysqli_query($conn,$sql);
-  // while($row=mysqli_fetch_assoc($result)){
-  //   echo "Your questions are--<br> ". $row['question'] ;
-  //   echo "<br>";
-  //   echo "<b><u>Option1 </u></b>  ". $row['option1'] ."<br>";
-  //   echo "<b><u>Option2 </u></b>   .". $row['option2']. "<br>";
-  //   echo "<b><u>Option3 </u></b>   .". $row['option3']. "<br>";
-  //   echo "<b><u>Option4 </u></b>   .". $row['option4']. "<br>";
-//     echo "<b><u>Option5 </u></b>   .". $row['option5']. "<br>";
+
+  <?php
+  // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  //     // Get the question and options from the POST data
+  //     $question = $_POST["question"];
+  //     $options = $_POST["options"];
+  
+  //     // Create an associative array to represent the MCQ
+  //     $mcq = [
+  //         "question" => $question,
+  //         "options" => $options
+  //     ];
+  
+  //     // Load existing MCQs from a file (you may want to use a database instead)
+  //     $mcqs = json_decode(file_get_contents("mcqs.json"), true) ?? [];
+  
+  //     // Add the new MCQ to the array
+  //     $mcqs[] = $mcq;
+  
+  //     // Save the updated MCQs array back to the file
+  //     file_put_contents("mcqs.json", json_encode($mcqs));
+  
+  //     // Redirect back to the form page or any other desired page
+  //     header("Location: mcq_form.php");
+  //     exit();
   // }
-  ?> 
+  ?>
+  
   </div>
 
   <script src="questions.js"></script>
