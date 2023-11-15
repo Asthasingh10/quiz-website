@@ -107,6 +107,7 @@
             </div>
         </div>
     </div>
+    
     <div id="feedback">
         <br>
         <h1>FeedBack</h1>
@@ -115,26 +116,30 @@
                 <img src="feedback.jpg" alt="">
             </div>
             <div>
-            <form action="">
+            <form action="index.php" method="post">
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control" placeholder="What did you enjoy the most about using our quiz platform?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback1" placeholder="What did you enjoy the most about using our quiz platform?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" placeholder="Did you find a variety of quizzes that matched your interests?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback2" placeholder="Did you find a variety of quizzes that matched your interests?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" placeholder="What improvements would you suggest to enhance community interactions?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback3" placeholder="What improvements would you suggest to enhance community interactions?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" placeholder="Is there anything else you would like to share about your experience with our quiz website?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback3" placeholder="Is there anything else you would like to share about your experience with our quiz website?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" placeholder="Are there any features or functionalities you feel are lacking on our website?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback4" placeholder="Are there any features or functionalities you feel are lacking on our website?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" placeholder="Any other suggestion ?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback5" placeholder="Any other suggestion...?">
                 </div>
+                <button type="button" class="btn btn-light">Submit</button>
             </form>
+            <?php
+                include "connect.php";
+            ?>
         </div>
         </div>
     </div>
