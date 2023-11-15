@@ -127,15 +127,15 @@
                     <input type="text" class="form-control" maxlength="100" name="feedback3" placeholder="What improvements would you suggest to enhance community interactions?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback3" placeholder="Is there anything else you would like to share about your experience with our quiz website?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback4" placeholder="Is there anything else you would like to share about your experience with our quiz website?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback4" placeholder="Are there any features or functionalities you feel are lacking on our website?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback5" placeholder="Are there any features or functionalities you feel are lacking on our website?">
                 </div>
                 <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback5" placeholder="Any other suggestion...?">
+                    <input type="text" class="form-control" maxlength="100" name="feedback6" placeholder="Any other suggestion...?">
                 </div>
-                <button type="button" class="btn btn-light">Submit</button>
+                <button type="submit" class="btn btn-light">Submit</button>
             </form>
             <?php
                 include "connect.php";
