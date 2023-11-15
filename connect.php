@@ -18,9 +18,9 @@
     $sql="INSERT INTO `feedback` (`feedback1`, `feedback2`, `feedback3`, `feedback4`, `feedback5`, `feedback6`) VALUES ('$f1', '$f2', '$f3', '$f4', '$f5', '$f6');";
     $result=mysqli_query($conn,$sql);
     if($result){
-        echo "Data sent successfully";
+        echo "Feedback sent successfully";
     }else{
-        echo "data not sent";
+        echo "Not sent successfully";
     }
     }
 ?>
