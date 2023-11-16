@@ -72,7 +72,7 @@
             <button type="button" onclick="addMCQ()" class="btn btn-secondary">Add MCQs</button>
             <button type="submit"  class="btn btn-secondary">Submit</button>
         </form>
-        <div id="mcqDisplay"></div>
+        <div id="mcqDisplay" name="mcqOne"></div>
   </div>
   </div>
     <script src="questions.js"></script>

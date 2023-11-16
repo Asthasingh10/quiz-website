@@ -15,20 +15,10 @@
     if(!$result){
       echo "Not sent successfully";
     }
-//   
-//    $sql2="SELECT * FROM `fillblanks`";
-//    $result2=mysqli_query($conn,$sql2);
-//    $num=mysqli_num_rows($result2);
-//    if($num>0){
-//    while($row=mysqli_fetch_assoc($result2)){
-//         echo var_dump($row);
-//     }
-// }    
  }
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
