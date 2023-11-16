@@ -1,7 +1,7 @@
 let mcqs = JSON.parse(localStorage.getItem('mcqs')) || [];
 
 function addMCQ() {
-  const questionInput = document.getElementById('question').value;
+  const questionInput = document.getElementById('fill_Question').value;
   const optionsContainer = document.getElementById('optionsContainer');
   const optionsInputs = optionsContainer.getElementsByTagName('input');
 
@@ -11,7 +11,7 @@ function addMCQ() {
   }
 
   const mcq = {
-    question: questionInput,
+    fill_Question: questionInput,
     options: options
   };
 
@@ -38,7 +38,7 @@ function displayMCQs() {
     const mcq = mcqs[i];
 
     const mcqDiv = document.createElement('div');
-    mcqDiv.innerHTML = `<strong>${mcq.question}</strong><br>`;
+    mcqDiv.innerHTML = `<strong>${mcq.fill_Question}</strong><br>`;
 
     for (const option of mcq.options) {
       mcqDiv.innerHTML += `- ${option}<br>`;
@@ -57,7 +57,7 @@ function displayMCQs() {
 }
 
 function resetForm() {
-  document.getElementById('question').value = '';
+  document.getElementById('fill_Question').value = '';
   document.getElementById('optionsContainer').innerHTML = '';
 }
 
