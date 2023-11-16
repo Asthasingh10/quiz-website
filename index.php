@@ -32,9 +32,6 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">MCQs</a></li>
                             <li><a class="dropdown-item" href="#">Fill in the blanks</a></li>
-                            <li><a class="dropdown-item" href="#">Puzzle Quiz</a></li>
-                            <li><a class="dropdown-item" href="#">IQ Tests</a></li>
-
                         </ul>
                     </li>
                     <li class="nav-item">

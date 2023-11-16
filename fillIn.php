@@ -58,14 +58,9 @@
                             Quiz Type
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">MCQs</a></li>
+                            <li><a class="dropdown-item" href="questions.php">MCQs</a></li>
                             <li><a class="dropdown-item" href="fillIn.php">Fill in the blanks</a></li>
-                            <li><a class="dropdown-item" href="#">Puzzle Quiz</a></li>
-                            <li><a class="dropdown-item" href="#">IQ Tests</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Link</a>
                     </li>
                 </ul>
 
@@ -88,8 +83,9 @@
             <div>
                 <input type="text" class="form-control" id="fillQuestion" placeholder="Enter Question"
                     name="fillQuestion">
+                <p class="text-grey">Make sure once you add Question. you can't return back </p>
             </div>
-            <div><br>
+            <div>
                 <div class="col-sm-2" id="optionsContainer"></div>
             </div>
             <button type="submit" onclick="addMCQ()" class="btn btn-secondary">Add Question</button>
