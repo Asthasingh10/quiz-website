@@ -1,18 +1,5 @@
 let mcqs = JSON.parse(localStorage.getItem('mcqs')) || [];
 
-function addOption() {
-  const optionsContainer = document.getElementById('optionsContainer');
-
-  const optionInput = document.createElement('input');
-  optionInput.type = 'text';
-  optionInput.placeholder = 'Enter option';
-
-  const lineBreak = document.createElement('br');
-
-  optionsContainer.appendChild(optionInput);
-  optionsContainer.appendChild(lineBreak);
-}
-
 function addMCQ() {
   const questionInput = document.getElementById('question').value;
   const optionsContainer = document.getElementById('optionsContainer');

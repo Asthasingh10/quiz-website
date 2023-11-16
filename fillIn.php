@@ -1,7 +1,7 @@
 <!-- INSERT INTO `questions` (`number`, `question`, `option1`, `option2`, `option3`, `option4`)
  VALUES ('2', 'how many baals are here?', 'one', 'two ', 'three', 'four'); -->
 
-<?php
+ <?php
     $servername="localhost";
     $username="root";
     $password="";
@@ -43,7 +43,7 @@
             </a>
             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">MCQs</a></li>
-                            <li><a class="dropdown-item" href="fillIn.php">Fill in the blanks</a></li>
+                            <li><a class="dropdown-item" href="fillblanks.php">Fill in the blanks</a></li>
                             <li><a class="dropdown-item" href="#">Puzzle Quiz</a></li>
                             <li><a class="dropdown-item" href="#">IQ Tests</a></li>
             </ul>
@@ -75,8 +75,7 @@
       <div><br>
         <div class="col-sm-2" id="optionsContainer" ></div>
       </div>
-      <button type="button" onclick="addOption()" class="btn btn-secondary">Add Option</button>
-      <button type="button" onclick="addMCQ()"    class="btn btn-secondary">Add MCQs</button>
+      <button type="button" onclick="addMCQ()"    class="btn btn-secondary">Add Question</button>
     </form>
     <div id="mcqDisplay"></div>
   </div>
@@ -110,7 +109,7 @@
   
   </div>
 
-  <script src="questions.js"></script>
+  <script src="fillIn.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
