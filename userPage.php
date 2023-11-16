@@ -36,9 +36,6 @@
                         <ul class="dropdown-menu active">
                             <li><a class="dropdown-item" href="#">MCQs</a></li>
                             <li><a class="dropdown-item" href="#">Fill in the blanks</a></li>
-                            <li><a class="dropdown-item" href="#">Puzzle Quiz</a></li>
-                            <li><a class="dropdown-item" href="#">IQ Tests</a></li>
-
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -55,23 +52,28 @@
         </div>
     </nav>
     <div>
-        <section class="text-white-600 body-font">
-            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-              <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white-900">Wants to initiate your Quiz...??</h1>
-                <div class="flex w-full md:justify-start justify-center items-end">
-                  <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
-                    <input type="text" id="hero-field" name="hero-field" placeholder="Enter code here" class="w-full bg-white-100 rounded border bg-opacity-50 border-white-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-white-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                  </div>
-                  <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Start</button>
-                </div>
-                
-              </div>
-              <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <img class="object-cover object-center rounded" alt="hero" src="requiz.png">
-              </div>
+    <section class="text-white-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -mx-4 -mb-10 text-center">
+          <div class="sm:w-1/2 mb-10 px-4">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full" src="mcq.jpg">
             </div>
-          </section>
+            <h2 class="title-font text-2xl font-medium text-white-900 mt-6 mb-3">MCQ's Question</h2>
+            <p class="leading-relaxed text-base">Wants to participate in MCQ type Quiz.</p>
+            <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"><a href="userQuestionMCQ.php">Start Now</a></button>
+          </div>
+          <div class="sm:w-1/2 mb-10 px-4">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full" src="fillinblanks.jpg">
+            </div>
+            <h2 class="title-font text-2xl font-medium text-white-900 mt-6 mb-3">Fill in the Blanks</h2>
+            <p class="leading-relaxed text-base">Wants to participate in Fill in the blanks type Quiz</p>
+            <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"><a href="userQuestionFill.php">Start Now</a></button>
+          </div>
+        </div>
+      </div>
+</section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
