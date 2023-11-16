@@ -53,19 +53,6 @@
         </div>
     </nav>
     <br> <br>
-
-
-<!-- <body>
-  <h2>Data Sender Page</h2>
-  
- ///////// Form to submit data
-  <form action="receiver.php" method="post">
-    <label for="dataInput">Enter Data:</label>
-    <input type="text" id="dataInput" name="dataToSend" placeholder="Enter data">
-    <br>
-    <button type="submit">Send Data</button>
-  </form> -->
-
     <div class="container">
         <div>
             <h1 class="heading">Wants to upload questions...?</h1>
@@ -74,15 +61,16 @@
             <h3>You can upload your questions here ... !! </h3> <br>
         </div>
 
-        <form action="questions.php" method="post" id="mcqForm">
+        <form action="userQuestionMCQ.php" method="post" id="mcqForm">
             <div>
-                <input type="text" class="form-control" id="question" placeholder="Enter Question" name="mcq">
+                <input type="text" class="form-control" id="question" placeholder="Enter Question"  name="dataToSend" >
             </div>
             <div><br>
                 <div class="col-sm-2" id="optionsContainer"></div>
             </div>
             <button type="button" onclick="addOption()" class="btn btn-secondary">Add Option</button>
             <button type="button" onclick="addMCQ()" class="btn btn-secondary">Add MCQs</button>
+            <button type="submit"  class="btn btn-secondary">Submit</button>
         </form>
         <div id="mcqDisplay"></div>
   </div>
