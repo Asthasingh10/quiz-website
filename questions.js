@@ -1,4 +1,5 @@
 let mcqs = JSON.parse(localStorage.getItem('mcqs')) || [];
+let questionCounter = 1;
 
 function addOption() {
   const optionsContainer = document.getElementById('optionsContainer');
@@ -25,7 +26,9 @@ function addMCQ() {
 
   const mcq = {
     question: questionInput,
-    options: options
+    options: options,
+    id: `mcq${questionCounter}`, // Generate a unique id for each MCQ
+    name: `mcqName${questionCounter}` // Generate a unique name for each MCQ
   };
 
   mcqs.push(mcq);

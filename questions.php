@@ -7,6 +7,8 @@
     if(!$conn){
       die("Sorry we are failed to connect".mysqli_connect_error());
     }
+
+    
 ?>
 <!doctype html>
 <html lang="en">
@@ -51,6 +53,19 @@
         </div>
     </nav>
     <br> <br>
+
+
+<!-- <body>
+  <h2>Data Sender Page</h2>
+  
+ ///////// Form to submit data
+  <form action="receiver.php" method="post">
+    <label for="dataInput">Enter Data:</label>
+    <input type="text" id="dataInput" name="dataToSend" placeholder="Enter data">
+    <br>
+    <button type="submit">Send Data</button>
+  </form> -->
+
     <div class="container">
         <div>
             <h1 class="heading">Wants to upload questions...?</h1>
