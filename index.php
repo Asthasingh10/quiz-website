@@ -47,8 +47,9 @@
                         <a class="nav-link active" aria-current="page" href="#about">About Us</a>
                     </li>
                 </ul>
-                    <button class="btn btn-outline-success my-1" type="menu"><a href="login.php">Login</a></button>
-                    <button class="btn btn-outline-success" type="menu"><a href="signupUser.php">SignUp</a></button>
+                    <!-- <button class="btn btn-outline-success my-1" type="menu"> -->
+                        <a href="login.php" class="btn btn-outline-success m-1">Login</a>
+                        <a href="signupUser.php" class="btn btn-outline-success">SignUp</a>
              
             </div>
         </div>
