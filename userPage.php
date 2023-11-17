@@ -61,7 +61,7 @@
             </div>
             <h2 class="title-font text-2xl font-medium text-white-900 mt-6 mb-3">MCQ's Question</h2>
             <p class="leading-relaxed text-base">Wants to participate in MCQ type Quiz.</p>
-            <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"><a href="userQuestionMCQ.php">Start Now</a></button>
+            <a href="userQuestionMCQ.php"><button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Start Now</button></a>
           </div>
           <div class="sm:w-1/2 mb-10 px-4">
             <div class="rounded-lg h-64 overflow-hidden">
@@ -69,7 +69,7 @@
             </div>
             <h2 class="title-font text-2xl font-medium text-white-900 mt-6 mb-3">Fill in the Blanks</h2>
             <p class="leading-relaxed text-base">Wants to participate in Fill in the blanks type Quiz</p>
-            <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"><a href="userQuestionFill.php">Start Now</a></button>
+            <a href="userQuestionFill.php"><button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Start Now</button></a>
           </div>
         </div>
       </div>
