@@ -33,13 +33,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#help">Help/FAQ</a>
+                        <a class="nav-link disabled" aria-current="page" href="#help">Help/FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#feedback">Feedback</a>
+                        <a class="nav-link disabled" aria-current="page" href="#feedback">Feedback</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+                        <a class="nav-link disabled" aria-current="page" href="#about">About Us</a>
                     </li>
                 </ul>
                 <a href="logout.php" class="btn btn-outline-success m-1">Logout</a>
