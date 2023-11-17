@@ -24,9 +24,9 @@
             if($_SERVER['REQUEST_METHOD']=='POST'){
                 $usernamee=$_POST['usernamee'];
                 $password=$_POST['password'];
-            $sql="SELECT * FROM `user-register` where username='$usernamee' AND password='$password' ";
-            $result=mysqli_query($conn,$sql);
-            $num=mysqli_num_rows($result);
+                $sql="SELECT * FROM `user-register` where username='$usernamee' AND password='$password' ";
+                $result=mysqli_query($conn,$sql);
+                $num=mysqli_num_rows($result);
                 if($num==1){
                     $login=true;
                     session_start();
