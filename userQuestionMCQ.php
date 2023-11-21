@@ -1,6 +1,13 @@
- <?php
- 
-?> 
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "registration-quiz";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if (!$conn) {
+    echo "Sorry we are failed to connect to the database";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,55 +20,113 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Quiz</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Quiz Type
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">MCQs</a></li>
-                            <li><a class="dropdown-item" href="fillIn.php">Fill in the blanks</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <form class="d-flex" role="search">
-                    <a href="logout.php" class="btn btn-outline-success">Logout</a>
-                </form>
-            </div>
-        </div>
-    </nav>
- <div class="container">
- <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
-        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-      </svg> -->
-      <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example"> <br> <br>
-      <div class="col-auto">
-        <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-      </div>
-      <p class="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
-      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-      <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-      <p class="text-gray-500">Senior Product Designer</p>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Quiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+           aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Quiz Type </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">MCQs</a></li>
+        <li><a class="dropdown-item" href="fillIn.php">Fill in the blanks</a></li>
+    </ul>
+    </li>
+    </ul>
+    <form class="d-flex" role="search">
+        <a href="logout.php" class="btn btn-outline-success">Logout</a>
+    </form>
     </div>
-  </div>
-</section>
- </div>
+    </div>
+    </nav>
+    <div class="container ">
+       <?php
+       $sql = "SELECT * FROM `questions`";
+       $result =mysqli_query($conn,$sql);
+       $num=mysqli_num_rows($result);
+       if($num>0){
+        while($row=mysqli_fetch_assoc($result)){
+        echo '<section class="text-gray-600 body-font ">
+         <div class="container px-5 py-7 mx-auto">
+           <div class="flex flex-col text-center w-full">
+           <div class="input-group input-group-lg">
+              <span class="input-group-text" id="inputGroup-sizing-lg"  >Question</span>
+              <input type="text" class="form-control" disabled  value="'. $row["question"] .' " >
+           </div>
+           </div>
+             <div class="w-1/3 m-7 ">
+               <div class="flex rounded-lg h-full bg-gray-100 flex-col">
+                 <div class="flex items-center">
+                 <div class="input-group-text">
+                  <input class="form-check-input mt-0" type="radio" name="optionss">
+                 </div>
+                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option1: '.$row["options1"].'</h2>
+                 </div>
+               </div>
+             </div>
+             <div class="w-1/3 m-7 ">
+             <div class="flex rounded-lg h-full bg-gray-100 flex-col">
+               <div class="flex items-center">
+               <div class="input-group-text">
+                   <input class="form-check-input mt-0" type="radio" name="optionss">
+               </div>
+                 <h2 class="text-gray-900 p-2 text-lg title-font font-medium" > Option2: '.$row["options2"].'</h2>
+               </div>
+             </div>
+           </div>
+           <div class="w-1/3 m-7 ">
+               <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
+                 <div class="flex items-center">
+                 <div class="input-group-text">
+                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                </div>
+                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option3: '.$row["options3"].'</h2>
+                 </div>
+               </div>
+             </div>
+             <div class="w-1/3 m-7 ">
+               <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
+                 <div class="flex items-center">
+                 <div class="input-group-text">
+                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                 </div>
+                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option4: '.$row["options4"].'</h2>
+                 </div>
+               </div>
+             </div>
+             <div class="w-1/3 m-7 ">
+               <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
+                 <div class="flex items-center">
+                 <div class="input-group-text">
+                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                 </div>
+                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option5: '.$row["options5"].'</h2>
+                 </div>
+             </div>
+             </div>
+           </div>
+           </div>
+         </div>
+       </section>
+        <div class="text-center form-text">You have to submit particular answer by answer....</div>
+       <div class="w-1/3 ml-12">
+       <button type="submit" class="btn btn-secondary mx-auto">Submit answer</button>
+       </div> ';
+       }
+    }
+      else{
+        echo "Ask admin to upload questions";
+       }
+       ?> 
+    </div>
 
 </body>
 </html>
