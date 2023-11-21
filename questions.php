@@ -1,15 +1,3 @@
-<?php
-    $servername="localhost";
-    $username="root";
-    $password="";
-    $database="questions";
-    $conn=mysqli_connect($servername,$username,$password,$database);
-    if(!$conn){
-      die("Sorry we are failed to connect".mysqli_connect_error());
-    }
-
-    
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -54,6 +42,30 @@
     </nav>
     <br> <br>
     <div class="container">
+<?php
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $database="registration-quiz";
+    $conn=mysqli_connect($servername,$username,$password,$database);
+    if(!$conn){
+      die("Sorry we are failed to connect".mysqli_connect_error());
+    }
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+    $questionName=$_POST['dataToSend'];
+    $options1=$_POST['option1'];
+    $options2=$_POST['option2'];
+    $options3=$_POST['option3'];
+    $options4=$_POST['option4'];
+    $options5=$_POST['option5'];
+    $sql= "INSERT INTO `questions` (`question`, `options1`, `options2`, `options3`, `options4`, `options5`)
+     VALUES ('$questionName', '$options1', '$options2','$options3','$options4','$options5');";
+    $result=mysqli_query($conn,$sql);
+    if(!$result){
+        echo"Failed to sent data to the server";
+    }
+    }
+?>
         <div>
             <h1 class="heading">Wants to upload questions...?</h1>
         </div> <br> <br>
@@ -61,7 +73,7 @@
             <h3>You can upload your questions here ... !! </h3> <br>
         </div>
 
-        <form action="userQuestionMCQ.php" method="post" id="mcqForm">
+        <form action="questions.php" method="post" id="mcqForm">
             <div>
                 <input type="text" class="form-control" id="question" placeholder="Enter Question"  name="dataToSend" >
             </div>
@@ -74,6 +86,7 @@
         </form>
         <div id="mcqDisplay" name="mcqOne"></div>
   </div>
+
   </div>
     <script src="questions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

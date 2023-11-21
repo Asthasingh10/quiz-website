@@ -1,17 +1,19 @@
 let mcqs = JSON.parse(localStorage.getItem('mcqs')) || [];
-let questionCounter = 1;
+// let questionCounter = 1;
 
+let options = 0; // Initialize a counter variable
 function addOption() {
   const optionsContainer = document.getElementById('optionsContainer');
-
   const optionInput = document.createElement('input');
   optionInput.type = 'text';
   optionInput.placeholder = 'Enter option';
-
+  optionInput.name = 'option' + (++options); // Increment the counter and set the name attribute
+    
   const lineBreak = document.createElement('br');
 
   optionsContainer.appendChild(optionInput);
   optionsContainer.appendChild(lineBreak);
+  console.log(optionInput.name);
 }
 
 function addMCQ() {
