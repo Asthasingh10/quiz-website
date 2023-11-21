@@ -1,5 +1,4 @@
 let mcqs = JSON.parse(localStorage.getItem('mcqs')) || [];
-// let questionCounter = 1;
 
 let options = 0; // Initialize a counter variable
 function addOption() {
