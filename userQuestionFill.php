@@ -82,7 +82,7 @@
             </section> ';
         }
     } else {
-        echo "0 results";
+        echo "Not uploaded any questions yet";
     }
     ?>
     <section class="text-gray-600 body-font relative">

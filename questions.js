@@ -32,9 +32,9 @@ function addMCQ() {
     name: `mcqName${questionCounter}` // Generate a unique name for each MCQ
   };
 
-  mcqs.push(mcq);
+mcqs.push(mcq);
 
-  // Store in localStorage
+  Store in localStorage
   localStorage.setItem('mcqs', JSON.stringify(mcqs));
 
   displayMCQs();
@@ -73,10 +73,10 @@ function displayMCQs() {
   }
 }
 
-function resetForm() {
-  document.getElementById('question').value = '';
-  document.getElementById('optionsContainer').innerHTML = '';
-}
+// function resetForm() {
+//   document.getElementById('question').value = '';
+//   document.getElementById('optionsContainer').innerHTML = '';
+// }
 
-// Initial display
-displayMCQs();
+// // Initial display
+// displayMCQs();

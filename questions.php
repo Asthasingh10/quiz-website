@@ -59,7 +59,7 @@
     $options4=$_POST['option4'];
     $options5=$_POST['option5'];
     $sql= "INSERT INTO `questions` (`question`, `options1`, `options2`, `options3`, `options4`, `options5`)
-            VALUES ('$questionName', '$options1', '$options2','$options3','$options4','$options5');";
+             VALUES ('$questionName', '$options1', '$options2', '$options3', '$options4','$options5');";
     $result=mysqli_query($conn,$sql);
     if(!$result){
         echo"Failed to sent data to the server";
@@ -81,7 +81,7 @@
                 <div class="col-sm-2" id="optionsContainer"></div>
             </div>
             <button type="button" onclick="addOption()" class="btn btn-secondary">Add Option</button>
-            <button type="button" onclick="addMCQ()" class="btn btn-secondary">Add MCQs</button>
+            <!-- <button type="button" onclick="addMCQ()" class="btn btn-secondary">Add MCQs</button> -->
             <button type="submit"  class="btn btn-secondary">Submit</button>
         </form>
         <div id="mcqDisplay" name="mcqOne"></div>
