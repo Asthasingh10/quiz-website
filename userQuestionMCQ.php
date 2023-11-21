@@ -48,25 +48,27 @@ if (!$conn) {
     </div>
     </nav>
     <div class="container ">
+        <form action="userQuestionMCQ.php" method="post">
        <?php
        $sql = "SELECT * FROM `questions`";
        $result =mysqli_query($conn,$sql);
        $num=mysqli_num_rows($result);
        if($num>0){
         while($row=mysqli_fetch_assoc($result)){
-        echo '<section class="text-gray-600 body-font ">
+        echo '
+        <section class="text-gray-600 body-font ">
          <div class="container px-5 py-7 mx-auto">
            <div class="flex flex-col text-center w-full">
            <div class="input-group input-group-lg">
               <span class="input-group-text" id="inputGroup-sizing-lg"  >Question</span>
-              <input type="text" class="form-control" disabled  value="'. $row["question"] .' " >
+              <input type="text" class="form-control" disabled name="ques" '. $row["question"] .' " >
            </div>
            </div>
              <div class="w-1/3 m-7 ">
                <div class="flex rounded-lg h-full bg-gray-100 flex-col">
                  <div class="flex items-center">
                  <div class="input-group-text">
-                  <input class="form-check-input mt-0" type="radio" name="optionss">
+                  <input class="form-check-input mt-0" type="radio" value="option1" name="optionss">
                  </div>
                    <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option1: '.$row["options1"].'</h2>
                  </div>
@@ -76,7 +78,7 @@ if (!$conn) {
              <div class="flex rounded-lg h-full bg-gray-100 flex-col">
                <div class="flex items-center">
                <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                   <input class="form-check-input mt-0" type="radio" value="option2" name="optionss">
                </div>
                  <h2 class="text-gray-900 p-2 text-lg title-font font-medium" > Option2: '.$row["options2"].'</h2>
                </div>
@@ -86,7 +88,7 @@ if (!$conn) {
                <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
                  <div class="flex items-center">
                  <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                   <input class="form-check-input mt-0" type="radio" value="option3" name="optionss">
                 </div>
                    <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option3: '.$row["options3"].'</h2>
                  </div>
@@ -96,7 +98,7 @@ if (!$conn) {
                <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
                  <div class="flex items-center">
                  <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                   <input class="form-check-input mt-0" type="radio" value="option4" name="optionss">
                  </div>
                    <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option4: '.$row["options4"].'</h2>
                  </div>
@@ -106,7 +108,7 @@ if (!$conn) {
                <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
                  <div class="flex items-center">
                  <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" name="optionss">
+                   <input class="form-check-input mt-0" type="radio" value="option5" name="optionss">
                  </div>
                    <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option5: '.$row["options5"].'</h2>
                  </div>
@@ -125,7 +127,18 @@ if (!$conn) {
       else{
         echo "Ask admin to upload questions";
        }
+
+       if($_SERVER['REQUEST_METHOD']=='POST'){
+            $question=$_POST['ques'];
+            $mcqanswer=$_POST['optionss'];
+            $sql="INSERT INTO `mcq-answer` (`question`, `optionss`) VALUES ('$question', '$mcqanswer');";
+            $result=mysqli_query($conn,$sql);
+            if(!$result){
+                echo "Data not succesfully sent to the database. Reload the page and try again !! ";
+            }
+    }
        ?> 
+    </form>
     </div>
 
 </body>
