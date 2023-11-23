@@ -24,7 +24,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
-                <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#help">Help/FAQ</a>
                     </li>
                     <li class="nav-item">
@@ -34,31 +34,30 @@
                         <a class="nav-link active" aria-current="page" href="#about">About Us</a>
                     </li>
                 </ul>
-                        <a href="login.php" class="btn btn-outline-success m-1">Login</a>
-                        <a href="signupUser.php" class="btn btn-outline-success">SignUp</a>
-             
+                <a href="login.php" class="btn btn-outline-success m-1">Login</a>
+                <a href="signupUser.php" class="btn btn-outline-success">SignUp</a>
+
             </div>
         </div>
     </nav>
     <div class="content-page" id="home">
-        <div> <br>
+        <div> <br><br>
             <p>
             <h1> 🎉 Hello Quiz Enthusiasts! 🎉 </h1> <br>
             Whether you're here to test your knowledge, challenge your friends, or discover something new, we're
             thrilled to have you on board! At Your Quiz Website, we believe that learning and having fun can go
             hand in hand. <br><br>
-            🧠 Ready to embark on a journey of curiosity and excitement? Dive into our diverse collection of quizzes
-            spanning various topics, from science and history to pop culture and beyond. Discover your strengths,
+            🧠 Ready to embark on a journey of curiosity and excitement? Discover your strengths,
             challenge your mind, and maybe even uncover a hidden talent or two!
             <br><br>
             🌟 Why Choose our Quiz Website? <br><br>
 
-            Engaging Quizzes: Our quizzes are crafted to entertain and educate, making learning a joyous experience.
+            Our Quiz websites is free to use, providing a cost-effective form of education for a wide audience...
             <br> <br>
-            Community Spirit: Join a vibrant community of quiz enthusiasts, share your achievements, and compete with
-            friends. <br><br>
-            Constant Innovation: We're always adding new quizzes and features to keep the excitement alive.
-            Don't miss out on the fun! Click the "Take a Quiz" button to get started, and let the adventure begin!
+            Quiz websites offer diverse quiz formats, including multiple-choice questions, true/false statements...
+            <br><br>
+
+            <b> Don't miss out on the fun! Click the "Login" button to get started, and let the adventure begin! </b>
             <br><br>
             <b> 🚀 Happy quizzing! </b>
             <br><br>
@@ -82,59 +81,67 @@
                 <p><b>Existing user: </b>If you are already a existing user, then please login to enjoy features of our
                     website</p>
                 <p>From the above navbar, you can <b>Login</b> and <b>SignUp</b> to quiz website</p>
-                <p><b>Admin:</b> If you are admin of quiz contest, then you can add / delete / edit your quizzes as
-                    according to your choice</p>
-                <p><b>User:</b> If you are user of any quiz contest, then you have to solve quizzes of your contest <br>
-                    For every correct answer you win a reward of plus point and for the incorrect answer your score will
-                    be deducted. </p>
-                <p>For any furthur enquiry, you can contact to our team . Our team members provide you all type of
+                <p><b>Admin:</b> If you are admin of quiz contest, then you can add quizzes as
+                    according to your choice like fill in th blanks / true or False / Multiple Choice Question</p>
+                <p><b>User:</b> If you are user of any quiz contest, then you have to solve quizzes of your panel as
+                    given per your admin <br>
+                </p>
+                <p>For any furthur enquiry, you can contact to our team by giving feedback . Our team members provide
+                    you all type of
                     support you need regarding the quizzes. </p>
                 <p>A comprehensive and user-friendly help menu can significantly enhance the overall user experience.
                 </p>
             </div>
         </div>
     </div>
-    
+
     <div id="feedback">
-        <br>
         <h1>FeedBack</h1>
         <div class="content-feedback">
             <div>
                 <img src="feedback.jpg" alt="">
             </div>
             <div>
-            <form action="index.php" method="post">
-                <div class="form-group mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback1" placeholder="What did you enjoy the most about using our quiz platform?">
-                </div>
-                <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback2" placeholder="Did you find a variety of quizzes that matched your interests?">
-                </div>
-                <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback3" placeholder="What improvements would you suggest to enhance community interactions?">
-                </div>
-                <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback4" placeholder="Is there anything else you would like to share about your experience with our quiz website?">
-                </div>
-                <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback5" placeholder="Are there any features or functionalities you feel are lacking on our website?">
-                </div>
-                <div class="form-group  mb-3">
-                    <input type="text" class="form-control" maxlength="100" name="feedback6" placeholder="Any other suggestion...?">
-                </div>
-                <button type="submit" class="btn btn-light">Submit</button>
+                <form action="index.php" method="post">
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" maxlength="100" name="feedback1"
+                            placeholder="What did you enjoy the most about using our quiz platform?">
+                    </div>
+                    <div class="form-group  mb-3">
+                        <input type="text" class="form-control" maxlength="100" name="feedback2"
+                            placeholder="Did you find a variety of quizzes that matched your interests?">
+                    </div>
+                    <div class="form-group  mb-3">
+                        <input type="text" class="form-control" maxlength="100" name="feedback3"
+                            placeholder="What improvements would you suggest to enhance community interactions?">
+                    </div>
+                    <div class="form-group  mb-3">
+                        <input type="text" class="form-control" maxlength="100" name="feedback4"
+                            placeholder="Is there anything else you would like to share about your experience with our quiz website?">
+                    </div>
+                    <div class="form-group  mb-3">
+                        <input type="text" class="form-control" maxlength="100" name="feedback5"
+                            placeholder="Are there any features or functionalities you feel are lacking on our website?">
+                    </div>
+                    <div class="form-group  mb-3">
+                        <input type="text" class="form-control" maxlength="100" name="feedback6"
+                            placeholder="Any other suggestion...?">
+                    </div>
+                    <button type="submit" class="btn btn-light">Submit</button>
+            </div>
             </form>
             <?php
                 include "connect.php";
             ?>
-        </div>
+
         </div>
     </div>
     <br>
     <div id="about">
         <h1>Our Team Members</h1> <br> <br>
         <div class="content-about">
-            <div class="card mb-3 me-4 p-4 namecard" style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
+            <div class="card mb-3 me-4 p-4 namecard"
+                style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="help.png" class="img-fluid rounded-start" alt="...">
@@ -146,7 +153,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 me-4 p-4 namecard" style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
+            <div class="card mb-3 me-4 p-4 namecard"
+                style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="help.png" class="img-fluid rounded-start" alt="...">
@@ -158,7 +166,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 me-4 p-4 namecard" style="max-width:540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
+            <div class="card mb-3 me-4 p-4 namecard"
+                style="max-width:540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="help.png" class="img-fluid rounded-start" alt="...">
@@ -170,7 +179,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 me-4 p-4 namecard" style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
+            <div class="card mb-3 me-4 p-4 namecard"
+                style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="help.png" class="img-fluid rounded-start" alt="...">
@@ -184,13 +194,13 @@
             </div>
         </div>
     </div>
-<hr>
+    <hr>
     <div class="footer" style="text-align: center; height: 10vh; margin-top: 1em;">
         <p>@madebyteamMembers</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

@@ -48,13 +48,13 @@
                 <h2>LOGIN</h2>
                 <div class="input-box">
                     <i class="fa-solid fa-lock" style="color: #e2e3e4;"></i>
-                    <label for="Username">Username</label>
+                    <label for="Username"></label>
                     <input type="text" required placeholder="Enter UserName" name="usernamee">
 
                 </div>
                 <div class="input-box">
                     <i class="fa-solid fa-lock"></i>
-                    <label for="password">Password</label>
+                    <label for="password"></label>
                     <input type="password" required name="password" placeholder="Enter Password">
                 </div>
                 <button type="submit" class="btn">Login</button>
