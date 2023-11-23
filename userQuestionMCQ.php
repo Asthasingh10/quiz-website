@@ -7,6 +7,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if (!$conn) {
     echo "Sorry we are failed to connect to the database";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +62,7 @@ if (!$conn) {
            <div class="flex flex-col text-center w-full">
            <div class="input-group input-group-lg">
               <span class="input-group-text" id="inputGroup-sizing-lg"  >Question</span>
-              <input type="text" class="form-control" disabled name="ques" '. $row["question"] .' " >
+              <input type="text" class="form-control" disabled '. $row["question"] .' " >
            </div>
            </div>
              <div class="w-1/3 m-7 ">
@@ -84,36 +85,6 @@ if (!$conn) {
                </div>
              </div>
            </div>
-           <div class="w-1/3 m-7 ">
-               <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
-                 <div class="flex items-center">
-                 <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" value="option3" name="optionss">
-                </div>
-                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option3: '.$row["options3"].'</h2>
-                 </div>
-               </div>
-             </div>
-             <div class="w-1/3 m-7 ">
-               <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
-                 <div class="flex items-center">
-                 <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" value="option4" name="optionss">
-                 </div>
-                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option4: '.$row["options4"].'</h2>
-                 </div>
-               </div>
-             </div>
-             <div class="w-1/3 m-7 ">
-               <div class="flex rounded-lg h-full bg-gray-100 p-1 flex-col">
-                 <div class="flex items-center">
-                 <div class="input-group-text">
-                   <input class="form-check-input mt-0" type="radio" value="option5" name="optionss">
-                 </div>
-                   <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> Option5: '.$row["options5"].'</h2>
-                 </div>
-             </div>
-             </div>
            </div>
            </div>
          </div>
@@ -129,9 +100,9 @@ if (!$conn) {
        }
 
        if($_SERVER['REQUEST_METHOD']=='POST'){
-            $question=$_POST['ques'];
+            
             $mcqanswer=$_POST['optionss'];
-            $sql="INSERT INTO `mcq-answer` (`question`, `optionss`) VALUES ('$question', '$mcqanswer');";
+            $sql="INSERT INTO `mcq-answer` ( `optionss`) VALUES ( '$mcqanswer');";
             $result=mysqli_query($conn,$sql);
             if(!$result){
                 echo "Data not succesfully sent to the database. Reload the page and try again !! ";

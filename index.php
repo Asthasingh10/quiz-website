@@ -24,17 +24,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle disabled" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Quiz Type
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">MCQs</a></li>
-                            <li><a class="dropdown-item" href="#">Fill in the blanks</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
+                <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#help">Help/FAQ</a>
                     </li>
                     <li class="nav-item">
@@ -44,7 +34,6 @@
                         <a class="nav-link active" aria-current="page" href="#about">About Us</a>
                     </li>
                 </ul>
-                    <!-- <button class="btn btn-outline-success my-1" type="menu"> -->
                         <a href="login.php" class="btn btn-outline-success m-1">Login</a>
                         <a href="signupUser.php" class="btn btn-outline-success">SignUp</a>
              
@@ -52,7 +41,7 @@
         </div>
     </nav>
     <div class="content-page" id="home">
-        <div> <br><br><br>
+        <div> <br>
             <p>
             <h1> 🎉 Hello Quiz Enthusiasts! 🎉 </h1> <br>
             Whether you're here to test your knowledge, challenge your friends, or discover something new, we're

@@ -78,15 +78,15 @@
                     </div>
                     <div class="input-gender">
                         <label>
-                            <input type="radio" class="radio-button" name="gender" id="male"><label
+                            <input type="radio" value="male" class="radio-button" name="gender" id="male"><label
                                 for="male">Male</label>
                         </label>
                         <label>
-                            <input type="radio" class="radio-button" name="gender" id="female"><label
+                            <input type="radio" value="female" class="radio-button" name="gender" id="female"><label
                                 for="female">Female</label>
                         </label>
                         <label>
-                            <input type="radio" class="radio-button" name="gender" id="other"><label
+                            <input type="radio" value="other" class="radio-button" name="gender" id="other"><label
                                 for="other">Other</label>
                         </label>
                         <p id="genderError" class="error"></p>

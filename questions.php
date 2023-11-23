@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body data-bs-theme="dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -42,7 +44,7 @@
     </nav>
     <br> <br>
     <div class="container">
-<?php
+        <?php
     $servername="localhost";
     $username="root";
     $password="";
@@ -55,11 +57,8 @@
     $questionName=$_POST['dataToSend'];
     $options1=$_POST['option1'];
     $options2=$_POST['option2'];
-    $options3=$_POST['option3'];
-    $options4=$_POST['option4'];
-    $options5=$_POST['option5'];
-    $sql= "INSERT INTO `questions` (`question`, `options1`, `options2`, `options3`, `options4`, `options5`)
-             VALUES ('$questionName', '$options1', '$options2', '$options3', '$options4','$options5');";
+    $sql= "INSERT INTO `questions` (`question`, `options1`, `options2`)
+             VALUES ('$questionName', '$options1', '$options2');";
     $result=mysqli_query($conn,$sql);
     if(!$result){
         echo"Failed to sent data to the server";
@@ -68,27 +67,27 @@
 ?>
         <div>
             <h1 class="heading">Wants to upload questions...?</h1>
-        </div> <br> <br>
+        </div> <br>
         <div>
             <h3>You can upload your questions here ... !! </h3> <br>
         </div>
-
         <form action="questions.php" method="post" id="mcqForm">
             <div>
-                <input type="text" class="form-control" id="question" placeholder="Enter Question"  name="dataToSend" >
+                <input type="text" class="form-control" id="question" placeholder="Enter Question" name="dataToSend">
             </div>
             <div><br>
                 <div class="col-sm-2" id="optionsContainer"></div>
             </div>
-            <button type="button" onclick="addOption()" class="btn btn-secondary">Add Option</button>
-            <!-- <button type="button" onclick="addMCQ()" class="btn btn-secondary">Add MCQs</button> -->
-            <button type="submit"  class="btn btn-secondary">Submit</button>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Option1:</span>
+                <input type="text" class="form-control" name="option1" placeholder="Enter Option1">
+                <span class="input-group-text">Option2:</span>
+                <input type="text" class="form-control" name="option2" placeholder="Enter Option2">
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
-        <div id="mcqDisplay" name="mcqOne"></div>
-  </div>
-
-  </div>
-    <script src="questions.js"></script>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
