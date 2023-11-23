@@ -34,8 +34,8 @@
                             Quiz Type
                         </a>
                         <ul class="dropdown-menu active">
-                            <li><a class="dropdown-item" href="#">MCQs</a></li>
-                            <li><a class="dropdown-item" href="#">Fill in the blanks</a></li>
+                            <li><a class="dropdown-item" href="userQuestionMCQ.php">MCQs</a></li>
+                            <li><a class="dropdown-item" href="userQuestionFill.php">Fill in the blanks</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
