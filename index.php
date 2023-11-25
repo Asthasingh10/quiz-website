@@ -7,22 +7,29 @@
     <title>Quiz Website-Mini Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Quiz</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a href='index.php'><img src="https://blog.hubspot.com/hubfs/google-quiz.jpg" class="quiz" /></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Quiz Type   
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">MCQs</a></li>
+                            <li><a class="dropdown-item" href="#">Fill in the blanks</a></li>
+                            <li><a class="dropdown-item" href="puzzel.html">Puzzle Quiz</a></li>
+                            <li><a class="dropdown-item" href="#">IQ Tests</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#help">Help/FAQ</a>
@@ -31,13 +38,16 @@
                         <a class="nav-link active" aria-current="page" href="#feedback">Feedback</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="#about">AboutUs</a>
                     </li>
                 </ul>
-                <a href="login.php" class="btn btn-outline-success m-1">Login</a>
-                <a href="signupUser.php" class="btn btn-outline-success">SignUp</a>
-
-            </div>
+                <ul>
+                    <a class="d-flex" role="search">
+                        <a href="login.php" ><button class="btnn btnn-primary" type="submit">Log in </button></a>
+                        <a href="signupUser.php" ><button class="btnn btnn-secondary" type="submit">Sign Up</button></a>
+                    </a>
+                    </ul>        
+            </div>  
         </div>
     </nav>
     <div class="content-page" id="home">

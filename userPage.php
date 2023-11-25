@@ -29,7 +29,7 @@
                         <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Quiz Type
                         </a>
@@ -37,17 +37,9 @@
                             <li><a class="dropdown-item" href="userQuestionMCQ.php">MCQs</a></li>
                             <li><a class="dropdown-item" href="userQuestionFill.php">Fill in the blanks</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  disabled" aria-current="page" href="#help">Help/FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-current="page" href="#feedback">Feedback</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-current="page" href="#about">About Us</a>
-                    </li>
+                    </li>    
                 </ul>
+                <a href="logout.php" class="btn btn-outline-success m-1">Logout</a>
             </div>
         </div>
     </nav>

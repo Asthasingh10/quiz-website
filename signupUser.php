@@ -311,8 +311,8 @@
                         <label for="radio">I accept the terms & conditions</label>
                         <p id="termsError" class="error"></p>
                     </div>
-                    <div class="input-name btn">
-                        <input type="submit" class="button" value="submit" onclick="validateForm()">
+                    <div class="btn">
+                        <input type="submit" class="button" onclick="validateForm()">
                     </div>
                 </form>
             </div>

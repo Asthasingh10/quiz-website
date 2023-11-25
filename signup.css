@@ -5,11 +5,11 @@
 }
 body{
     display: flex;
-    /* justify-content: center; */
-    color: black;
+    justify-content: center;
+    color: white;
 }
 .container{
-    background-color: black;
+    background-image:  linear-gradient(to bottom right,#20002c ,#cbb4d4);
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -23,41 +23,106 @@ body{
     border-radius: 3em;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height:88vh;
     margin: auto;
-    box-shadow: 8px 8px 80px red;
     flex-basis: 60%;
-    background-image: linear-gradient(to bottom right,black  20% ,#4d0000 80%);
+    background-image: linear-gradient(to bottom right, #cbb4d4,#20002c 80%);
 }
 .box h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.8em;
     padding:0.5em;
 }
-.form-container{
+.form-container {
     width: 300px;
-    margin: 50px auto 0;
+    margin:  auto;
+    padding: 1px;
+    border-radius: 10px;
+    color: #fff;
+
 }
-.input-name{
-   position: relative;
-   margin: 18px auto;  
+
+.input-name {
+    position: relative;
+    margin-bottom: 15px;
 }
-.input-name input,.element{
-    height: 2em;
-    width: 20em;
+
+.input-name i {
+    position: absolute;
+    top: 43%;
+    transform: translateY(-40%);
+    color: #fff;
 }
-.button{
-    background-color: #150c0c;
-    font-size: 1em;
+.input-name:hover {
+    background: #bdc3c7;
+    width: 60%;
+    outline: none;
+    box-shadow: 0px 0px 15px #20002c;
+}
+
+.input-name input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+
+.input-gender,
+.input-terms {
+    background: transparent;
+    margin-bottom: 15px;
+}
+
+.radio-button,
+.check-btn {
+    margin-right: 5px;
+}
+
+
+.btn {
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #20002c;
+    color:#fff;
+    width: 50%;
+    font-size:1rem;
+    font-family:Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-input:hover{
-    box-shadow: 5px 5px 10px rgb(196, 84, 84);
+
+.button:hover {
+    background-color: #cbb4d4;
+    transform: scale(1.2);
+    border-radius:8px;
 }
-.button:hover{
-    background-color: #352323;
-    font-size: 1em;
-    color: white;
-    cursor: pointer;
+@media only screen and (max-width: 668px) {
+    .container{
+        max-width: 100%;
+        text-align: center;
+    }
+    .box{
+        max-width: 100%;
+        text-align: center; 
+
+    }
+    .form-container {
+        max-width: 100%;
+    }
+    .button{
+        max-width: 100%;
+        text-align: center;
+    }
+}
+input::placeholder {
+    color: rgb(255, 255, 255);
 }
