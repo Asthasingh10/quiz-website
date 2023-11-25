@@ -81,3 +81,6 @@ body{
     display: flex;
     flex-direction: column;
 }
+.newac a{
+    color: white;
+}

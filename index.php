@@ -51,7 +51,7 @@
         </div>
     </nav>
     <div class="content-page" id="home">
-        <div> <br><br>
+        <div>
             <p>
             <h1> 🎉 Hello Quiz Enthusiasts! 🎉 </h1> <br>
             Whether you're here to test your knowledge, challenge your friends, or discover something new, we're
