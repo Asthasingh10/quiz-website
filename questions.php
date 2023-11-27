@@ -54,15 +54,14 @@
       die("Sorry we are failed to connect".mysqli_connect_error());
     }
     if($_SERVER['REQUEST_METHOD']=='POST'){
-    $questionName=$_POST['dataToSend'];
-    $options1=$_POST['option1'];
-    $options2=$_POST['option2'];
-    $sql= "INSERT INTO `questions` (`question`, `options1`, `options2`)
-             VALUES ('$questionName', '$options1', '$options2');";
-    $result=mysqli_query($conn,$sql);
-    if(!$result){
-        echo"Failed to sent data to the server";
-    }
+        $questionName=$_POST['dataToSend'];
+        $options1=$_POST['option1'];
+        $options2=$_POST['option2'];
+        $sql= "INSERT INTO `questions` (`question`, `options1`, `options2`) VALUES ('$questionName', '$options1', '$options2');";
+        $result=mysqli_query($conn,$sql);
+        if(!$result){
+            echo"Failed to sent data to the server";
+        }
     }
 ?>
         <div>

@@ -62,7 +62,7 @@ if (!$conn) {
            <div class="flex flex-col text-center w-full">
            <div class="input-group input-group-lg">
               <span class="input-group-text" id="inputGroup-sizing-lg"  >Question</span>
-              <input type="text" class="form-control" disabled '. $row["question"] .' " >
+              <h2 class="text-gray-900 p-2 text-lg title-font font-medium"> '.$row["question"].'</h2>
            </div>
            </div>
              <div class="w-1/3 m-7 ">

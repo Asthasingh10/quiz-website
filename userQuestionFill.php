@@ -110,7 +110,7 @@
      if($_SERVER['REQUEST_METHOD']=='POST'){
       $name=$_POST['name'];
       $answer=$_POST['message'];
-      $sql2="INSERT INTO `fillupuser` (`name`, `answers`) VALUES ('$name', '$answer')";
+      $sql2="INSERT INTO `fillupuser` (`name`, `answers`) VALUES ('$name', '$answer');";
       $result2=mysqli_query($conn,$sql2);
       if($result2){   
          echo "Answers submitted succesfully";

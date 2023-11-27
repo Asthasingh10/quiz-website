@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
             <a href='index.php'><img src="https://blog.hubspot.com/hubfs/google-quiz.jpg" class="quiz" /></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
