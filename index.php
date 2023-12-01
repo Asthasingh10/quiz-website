@@ -158,12 +158,12 @@
                 style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="help.png" class="img-fluid rounded-start" alt="...">
+                        <img src="./astha.png" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <h5>Astha singh</h5>
-                        <p>Hello! I'm Astha singh , a versatile and passionate Fullstack developer with a strong
-                            foundation in both backend and front-end technologies</p>
+                        <p>Hello! I'm Astha singh , a versatile and passionate Fullstack developer with a robust skill of strong
+                            foundation in both backend and front-end technologies.</p>
                     </div>
                 </div>
             </div>
@@ -171,12 +171,11 @@
                 style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="help.png" class="img-fluid rounded-start" alt="...">
+                        <img src="bharat.jpeg" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <h5>Bharat Kumar</h5>
-                        <p>This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p>Hello! I'm Bharat Kumar, a detail-oriented front-end developer dedicated to crafting visually compelling and user-friendly web experiences.</p>
                     </div>
                 </div>
             </div>
@@ -184,12 +183,11 @@
                 style="max-width:540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="help.png" class="img-fluid rounded-start" alt="...">
+                        <img src="manish.jpeg" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <h5>Manish kumar</h5>
-                        <p>This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p>I'm Manish Kumar combines a passion for learning and implementing cutting-edge technologies, seeking to build intuitive and visually appealing web interfaces.</p>
                     </div>
                 </div>
             </div>
@@ -197,12 +195,11 @@
                 style="max-width: 540px; box-shadow: 8px 8px 8px rgb(104, 99, 99); cursor: pointer;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="help.png" class="img-fluid rounded-start" alt="...">
+                        <img src="yogita.jpeg" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <h5>Yogita</h5>
-                        <p>This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p> I'm Yogita a front-end developer , creating visually stunning and user-centric web interfaces with expertise in HTML, CSS, and JavaScript.</p>
                     </div>
                 </div>
             </div>
