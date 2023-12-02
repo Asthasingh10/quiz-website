@@ -1,16 +1,16 @@
 <?php
  if($_SERVER['REQUEST_METHOD']=='POST'){
     $fill=$_POST['fillQuestion'];
-        $servername="localhost";
-        $username="root";
-        $password="";
-        $database="registration-quiz";
-        $conn=mysqli_connect($servername,$username,$password,$database);
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $database="registration-quiz";
+    $conn=mysqli_connect($servername,$username,$password,$database);
         if(!$conn){
             die("Sorry we are failed to connect");
         }
    
-    $sql="INSERT INTO `fillblanks` (`sno`, `fillQuestion`) VALUES (NULL, '$fill')";
+    $sql="INSERT INTO `fillblanks` ( `fillQuestion`) VALUES ('$fill');";
     $result=mysqli_query($conn,$sql);
     if(!$result){
       echo "Not sent successfully";
@@ -71,7 +71,7 @@
 
         <form action="fillIn.php" method="post">
             <div>
-                <input type="text" class="form-control" id="fillQuestion" placeholder="Enter Question"
+                <input type="text" class="form-control"  placeholder="Enter Question"
                     name="fillQuestion">
                 <p class="text-grey">Make sure once you add Question. you can't return back </p>
             </div>
@@ -80,7 +80,7 @@
             </div>
             <button type="submit" onclick="addMCQ()" class="btn btn-secondary">Add Question</button>
         </form>
-        <div id="mcqDisplay"></div>
+
     </div>
     <script src="fillIn.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
